@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Mafia Game!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-8O-dm7">
+                                <rect key="frame" x="104" y="45" width="392" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="392" id="67d-nB-Oya"/>
+                                    <constraint firstAttribute="width" constant="392" id="YKl-7N-dJ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="67d-nB-Oya"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Aj-J6-PnU">
+                                <rect key="frame" x="64" y="379" width="472" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="472" id="4jV-h6-4sM"/>
+                                </constraints>
+                                <state key="normal" title="Play as Sheriff"/>
+                                <connections>
+                                    <action selector="playAsSheriff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPx-CX-t6R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFR-EA-1zU">
+                                <rect key="frame" x="64" y="234" width="472" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="472" id="itu-QY-lfS"/>
+                                </constraints>
+                                <state key="normal" title="Play as Mafia Member"/>
+                                <connections>
+                                    <action selector="playAsMafia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXI-xE-MTx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Jq-8O-dm7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LB5-wU-8Pu"/>
+                            <constraint firstItem="0Aj-J6-PnU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="359" id="Wmk-sm-OEk"/>
+                            <constraint firstItem="2Jq-8O-dm7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="a4v-U9-kzF"/>
+                            <constraint firstItem="kFR-EA-1zU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oXI-wF-sjR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Jq-8O-dm7" secondAttribute="trailing" constant="20" id="sC0-ys-Yis"/>
+                            <constraint firstItem="0Aj-J6-PnU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="src-Z2-f22"/>
+                            <constraint firstItem="kFR-EA-1zU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="214" id="zo1-Zq-ZkT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sC0-ys-Yis"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="9PE-eg-Y7X" kind="show" identifier="mafia" id="lZd-6X-daf"/>
+                        <segue destination="9PE-eg-Y7X" kind="show" identifier="sheriff" id="2XR-tz-4t7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="423"/>
+        </scene>
+        <!--Pressure is On!-->
+        <scene sceneID="kND-tM-EGr">
+            <objects>
+                <viewController title="Pressure is On!" id="9PE-eg-Y7X" customClass="MainGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QEy-qN-NVJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="FCz-28-vVS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4NQ-hf-GCx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKb-tM-UZx">
+                                <rect key="frame" x="242" y="323" width="117" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="pIm-Yz-tmg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter you answer to the riddle before making your attempt.(one word all lowercase) " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reW-jU-53e">
+                                <rect key="frame" x="125" y="28" width="350" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="H9V-qz-l2H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer this question and if you get it right you will succeed in your attempt!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykc-VO-5cj">
+                                <rect key="frame" x="104" y="190" width="392" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="392" id="4aD-lc-4BH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-Qe-Fsg">
+                                <rect key="frame" x="164" y="429" width="273" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="yR0-zi-qQJ"/>
+                                </constraints>
+                                <state key="normal" title="Attempt to Kill/Interrogate Player"/>
+                                <connections>
+                                    <action selector="attemptButton:" destination="9PE-eg-Y7X" eventType="touchUpInside" id="Gnw-yd-027"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label to tell player how many innocents left to kill or how many players left to interogate." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89Q-LP-MJ7">
+                                <rect key="frame" x="104" y="490" width="371" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="6Mc-at-IPa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ykc-VO-5cj" firstAttribute="top" secondItem="QEy-qN-NVJ" secondAttribute="bottom" constant="170" id="6b0-Eg-Vav"/>
+                            <constraint firstItem="reW-jU-53e" firstAttribute="centerX" secondItem="4NQ-hf-GCx" secondAttribute="centerX" id="U0d-sG-VLe"/>
+                            <constraint firstItem="RKb-tM-UZx" firstAttribute="centerX" secondItem="4NQ-hf-GCx" secondAttribute="centerX" id="WE9-Eo-6ar"/>
+                            <constraint firstItem="VhL-Qe-Fsg" firstAttribute="top" secondItem="QEy-qN-NVJ" secondAttribute="bottom" constant="409" id="f4e-mP-xCb"/>
+                            <constraint firstItem="ykc-VO-5cj" firstAttribute="centerX" secondItem="4NQ-hf-GCx" secondAttribute="centerX" id="g58-Bc-QtL"/>
+                            <constraint firstAttribute="bottom" secondItem="89Q-LP-MJ7" secondAttribute="bottom" constant="20" symbolic="YES" id="gFC-fY-th9"/>
+                            <constraint firstItem="89Q-LP-MJ7" firstAttribute="leading" secondItem="ykc-VO-5cj" secondAttribute="leading" id="huY-DV-f1y"/>
+                            <constraint firstItem="89Q-LP-MJ7" firstAttribute="trailing" secondItem="reW-jU-53e" secondAttribute="trailing" id="m5k-Ot-yh7"/>
+                            <constraint firstItem="RKb-tM-UZx" firstAttribute="top" secondItem="QEy-qN-NVJ" secondAttribute="bottom" constant="303" id="oW0-co-zjd"/>
+                            <constraint firstItem="reW-jU-53e" firstAttribute="top" secondItem="QEy-qN-NVJ" secondAttribute="bottom" constant="8" id="pDQ-be-YpD"/>
+                            <constraint firstItem="VhL-Qe-Fsg" firstAttribute="centerX" secondItem="4NQ-hf-GCx" secondAttribute="centerX" id="vGi-jG-XmQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerText" destination="RKb-tM-UZx" id="pX2-IL-lxO"/>
+                        <outlet property="buttonLabel" destination="VhL-Qe-Fsg" id="hLL-bg-rZg"/>
+                        <outlet property="infoLabel" destination="89Q-LP-MJ7" id="2iA-NM-b6R"/>
+                        <outlet property="riddleLabel" destination="ykc-VO-5cj" id="a42-m7-g7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTn-Lv-9Tt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="423"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2XR-tz-4t7"/>
+    </inferredMetricsTieBreakers>
+</document>
